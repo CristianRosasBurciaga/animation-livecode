@@ -10,11 +10,11 @@ int main() {
     bn::sprite_ptr looker = bn::sprite_items::look.create_sprite();
     looker.set_tiles(bn::sprite_items::look.tiles_item(), 3);
 
-    bn::sprite_animate_action<6> animation = bn::create_sprite_animate_action_forever(
+    bn::sprite_animate_action<8> animation = bn::create_sprite_animate_action_forever(
         looker, 
         20, 
         bn::sprite_items::look.tiles_item(),
-        0,1,2,3,2,3);
+        0,1,2,3,2,3,2,1);
 
     while(true) {
         animation.update();
